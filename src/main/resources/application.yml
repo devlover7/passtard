@@ -1,0 +1,15 @@
+spring:
+    h2:
+      console:        enabled: true
+    datasource:
+        driverClassName: org.h2.Driver
+        password: ${PT_MASTER_PASSWORD}
+        url: jdbc:h2:./data/db
+        username: ${PT_MASTER_USERNAME}
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+
+passtard:
+      token:
+        secret: ${PT_MASTER_SECRET}
+        expiration_time: 50000
